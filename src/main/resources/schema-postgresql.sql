@@ -66,3 +66,30 @@ create table if not exists Alunos (
     futuramente serem abordados pelo usuário / Aluno.
 */
 
+
+-- NOTA:
+-- Como valores repetidos são criados sempre a aplicação
+-- for rodada dentro de Instituição e Cursos,
+--  esses comandos serão feitos diretamente no BD.
+
+
+
+-- Inserir instituições
+/*
+    insert into Instituicao (nm_instituicao)
+        values('Fatec Rubes Lara');
+*/
+-- Inserir Cursos no banco
+/*
+    insert into Cursos (nm_curso, sg_curso, cd_instituicao)
+        values('Análise e Desenvolvimento de Sistemas', 'ADS', 1),
+              ('Gestão Empresarial', 'GE', 1),
+              ('Gestão Portuária', 'GP', 1),
+              ('Logística', 'LOG', 1),
+              ('Sistemas para Internet', 'SI', 1);
+*/
+
+-- NOTA:
+-- Tentei inserir pelo psql e deu erro, acho q porque ele não suporta
+-- assentuação e não reconhece os inserts. Rodei eles aqui mesmo e os
+-- apaguei.
