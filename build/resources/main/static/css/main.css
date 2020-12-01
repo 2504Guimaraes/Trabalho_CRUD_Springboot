@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap');
+
+*{
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body{
+    background: #f3f2f9!important;
+}
+
+.menu-principal{
+    padding: 20px;
+}
+
+.menu-principal.links{
+    display: flex;
+}
+
+@media(max-width: 903px){
+    .menu-principal.links,
+    .links ul{
+        flex-wrap: wrap;
+    }
+    .links ul li a{
+        font-size: 13px;
+        margin: 5px!important;
+    }
+    .box{
+        width: 90%;
+    }
+    table{
+        margin: 30px -35px;
+    }
+}
+
+.links ul{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+.links ul li a{
+    color: #000;
+    font-weight: 500;
+    line-height: 29,11px;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.box{
+    background: #FFF;
+    max-width: 400px;
+    box-shadow: 0px 8px 10px rgba(222, 221, 235, 0.2), 0px 16px 24px rgba(222, 221, 235, 0.14), 0px 6px 30px rgba(222, 221, 235, 0.12);
+    padding: 50px;
+    margin: 35px auto;
+}
+
+.inputs input,
+.inputs select{
+    display: block;
+    width: 100%;
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px 0;
+    outline: none;
+}
+
+.btnCriar{
+    background: #E2E6EA;
+    border: 2px solid #C0C0C0;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    padding: 3px;
+    margin: 30px 0;
+}
+
+
+/*ApagarAluno.html*/
+
+.box.curso h3{
+    text-align: center;
+}
+
+.del{
+    margin-top: 20px!important;
+}
+
+/*verAlunosReprovados.html*/
+.box.reprovados{
+    max-width: 750px;
+}
+
+.box.reprovados h3{
+    text-align: center;
+}
+
+table{
+    background: #FFFFFF;
+    border: 1.5px solid #C0C0C0;
+    overflow: hidden;
+    border-radius: 5px!important;
+    border-collapse:separate!important;
+    font-size: 14px;
+    color: #817f7f;
+}
+
+thead{
+    background: #E5E5E5;
+}
+
+th{
+    font-weight: 400;
+}
+
+/*alunosDeSi.html*/
+/*alunosDeLog.html*/
+/*alunosDeAds.html*/
+.alunos-cursando{
+    max-width: 700px;
+}
