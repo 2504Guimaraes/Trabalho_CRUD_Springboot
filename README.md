@@ -12,4 +12,5 @@ banco ultilizado foi o PostgreSQL.
 ### Observações Importantes:
 O arquivo application.yml (responsável pela conexão entre o domínio disponibilizado 
 pelo Heroku, e as configurações do banco também disponibilizado pelo mesmo) está indisponível.
-Porém será deixado um modelo caso interesse por implementação similar.
+Porém será deixado um modelo caso interesse por implementação similar dentro da
+pasta [../main/java/resources/Modelo application(yml)](#).
