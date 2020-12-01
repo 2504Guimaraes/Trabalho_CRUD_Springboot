@@ -62,7 +62,7 @@ create table if not exists Alunos (
 
 /*
     Terceiro passo:
-    Inserindo valores dentro das 2 primeiras tabelas, para
+    Inserindo valores dentro das respectivas tabelas, para
     futuramente serem abordados pelo usuário / Aluno.
 */
 
