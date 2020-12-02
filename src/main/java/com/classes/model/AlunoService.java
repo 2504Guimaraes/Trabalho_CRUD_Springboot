@@ -9,8 +9,8 @@ public class AlunoService {
     @Autowired
     AlunoDAO alunoDAO;
 
-    public void inserir(Aluno alunoGerado)
+    public void inserir(Aluno novo_aluno)
     {
-        alunoDAO.inserir(alunoGerado);
+        alunoDAO.inserir(novo_aluno);
     }
 }

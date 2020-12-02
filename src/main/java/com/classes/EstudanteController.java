@@ -25,10 +25,10 @@ public class EstudanteController {
         return "criarAluno";
     }
 
-    @PostMapping("/TodosOsAlunos")
-    public String inserirAluno(@ModelAttribute Aluno alunoGerado) {
+    @PostMapping("/todosOsAlunos")
+    public String inserirAluno(@ModelAttribute Aluno novo_aluno) {
         AlunoService alunoDAO = context.getBean(AlunoService.class);
-        alunoDAO.inserir(alunoGerado);
+        alunoDAO.inserir(novo_aluno);
         return "criarAluno"; // por enquanto ñ encaminho p/ nenhuma pág.
     }
 }
