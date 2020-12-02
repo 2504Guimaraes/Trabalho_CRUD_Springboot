@@ -30,13 +30,14 @@
 
         <main>
 
+
             <form class="box"
                   action="#"
-                  th:action="@{/todosOsAlunos}"
-                  th:object="${novo_aluno}"
+                  th:action="@{/alunocadastrado}"
+                  th:object="${aluno}"
                   method="post">
 
-                <!--
+
                 <h3>Crie um novo aluno</h3>
 
                 <p id="aviso_p_validacao">Aviso para validação!</p>
@@ -50,20 +51,20 @@
 
                     <label for="nm_aluno">Digite o nome do aluno</label>
                     <input
+                            th:field="*{nome}"
                             type="text"
                             id="nm_aluno"
                             placeholder="insira o nome do aluno"
-                            required
-                            th:field="*{nm_aluno}">
+                            required>
 
 
                     <label for="sexo_aluno">Selecione o sexo do aluno:</label>
                     <div class="form-group">
                         <select
+                                th:field="*{sexo}"
                                 id="sexo_aluno"
                                 class="form-select"
-                                required
-                                th:field="*{sg_sexoaluno}">
+                                required>
 
                             <option value="">Selecione o sexo</option>
                             <option>Masculino</option>
@@ -72,32 +73,13 @@
                     </div>
 
 
-                    <label for="idade_aluno">Selecione a idade do aluno:</label>
-                    <div class="form-group">
-                        <select
-                                id="idade_aluno"
-                                class="form-select"
-                                required
-                                th:field="*{qt_idade}">
-
-
-                            <option value="">Selecione a idade do aluno</option>
-
-                            <option th:each="idade : ${#numbers.sequence(16,120)}"
-                                    th:value="${idade}" th:text="${idade}">
-                            </option>
-
-                        </select>
-                    </div>
-
-
                     <label for="curso_aluno">Selecione o curso do aluno:</label>
                     <div class="form-group">
                         <select
+                                th:field="*{codigoCurso}"
                                 id="curso_aluno"
                                 class="form-select"
-                                required
-                                th:field="*{cd_curso}">
+                                required>
                             <option value="">Selecione o curso</option>
                             <option>ADS</option>
                             <option>GE</option>
@@ -109,18 +91,33 @@
 
                     <label for="media_aluno">Digite a nota média final do aluno</label>
                     <input
+                            th:field="*{nota}"
                             type="text"
                             id="media_aluno"
                             name="aluno"
                             placeholder="Exemplo de média: 7.5"
-                            required
-                            th:field="*{qt_notaaluno}">
+                            required>
 
-                            -->
+                    <label for="idade_aluno">Selecione a idade do aluno:</label>
+                    <div class="form-group">
+                        <select
+                                th:field="*{idade}"
+                                id="idade_aluno"
+                                class="form-select"
+                                required>
 
-                    <button id="btnCriar" class="btn">Criar Aluno</button>
+                            <option value="">Selecione a idade do aluno</option>
+
+                            <option th:each="age : ${#numbers.sequence(16,120)}"
+                                    th:value="${age}" th:text="${age}">
+                            </option>
+
+                        </select>
+                    </div>
+
+                    <button type="submit" id="btnCriar" class="btn">Criar Aluno</button>
+
                 </div>
-
             </form>
 
         </main>

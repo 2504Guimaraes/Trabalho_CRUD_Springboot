@@ -2,61 +2,75 @@ package com.classes.model;
 
 public class Aluno {
 
-    private int cd_aluno;
-    private String nm_aluno;
-    private String sg_sexoaluno;
-    private int cd_curso;
-    private double qt_notaaluno;
-    private int qt_idade;
+    private int id;
+    private String nome;
+    private String sexo;
+    private int codigoCurso;
+    private double nota;
+    private int idade;
 
     public Aluno() {}
-    
 
-    // Setters:
-
-    public void setNm(String nm_aluno) {
-        this.nm_aluno = nm_aluno;
+    public Aluno( String nome, String sexo, int codigoCurso, double nota, int idade) {
+        this.nome = nome;
+        this.sexo = sexo;
+        this.codigoCurso = codigoCurso;
+        this.nota = nota;
+        this.idade = idade;
     }
 
-    public void setSgSx(String sx_aluno) {
-        this.sg_sexoaluno = sx_aluno;
-    }
-
-    public void setIdCurso(int cd_curso) {
-        this.cd_curso = cd_curso;
-    }
-
-    public void setNota(double qt_notaaluno) {
-        this.qt_notaaluno = qt_notaaluno;
-    }
-
-    public void setIdade(int idade) {
-        this.qt_idade = idade;
+    public Aluno(int id, String nome, String sexo, int codigoCurso, double nota, int idade) {
+        this.id = id;
+        this.nome = nome;
+        this.sexo = sexo;
+        this.codigoCurso = codigoCurso;
+        this.nota = nota;
+        this.idade = idade;
     }
 
     // Getters:
 
+    /*
+      AVISO IMPORTANTÍSSIMO!!!
+
+      Caso o nome dos atributos não seja compatível com o nome
+      dos seus métodos...
+
+      Exmeplo:
+
+      private int codigoCurso; <- atributo
+      public int getCodigoCurso() <- método get
+
+      note que a palavra "codigoatributo" aparece em ambos, independente de
+      letras maiusculas
+
+      .. o Thymeleaf será incapaz de fazer a alimentação na view,
+      impossibilitando vc de cadastrar o usuário ou qualquer outra
+      coisa do tipo... :P
+
+    */
+
     public int getId() {
-        return this.cd_aluno;
+        return this.id;
     }
 
-    public String getNm() {
-        return this.nm_aluno;
+    public String getNome() {
+        return this.nome;
     }
 
-    public String getSgSx() {
-        return this.sg_sexoaluno;
+    public String getSexo() {
+        return this.sexo;
     }
 
-    public int getIdCurso() {
-        return this.cd_curso;
+    public int getCodigoCurso() {
+        return this.codigoCurso;
     }
 
     public double getNota() {
-        return this.qt_notaaluno;
+        return this.nota;
     }
 
     public int getIdade() {
-        return this.qt_idade;
+        return this.idade;
     }
 }

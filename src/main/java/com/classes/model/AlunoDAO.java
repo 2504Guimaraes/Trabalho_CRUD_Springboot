@@ -23,18 +23,18 @@ public class AlunoDAO {
         jdbc = new JdbcTemplate(dataSource);
     }
 
-    public void inserir(Aluno novo_aluno)
+    public void inserirAluno(Aluno aluno)
     {
         String sql = "insert into Alunos" +
-                "(nm_aluno, sg_sexoAluno, cd_curso, qt_notaAluno, qt_idade)" +
-                "values(?, ?, ?, ?, ?)";
+                "(nm_aluno, sg_sexoaluno, cd_curso, qt_notaaluno, qt_idade)" +
+                "values(?,?,?,?,?)";
 
         jdbc.update(sql, new Object[] {
-                novo_aluno.getNm(),
-                novo_aluno.getSgSx(),
-                novo_aluno.getIdCurso(),
-                novo_aluno.getNota(),
-                novo_aluno.getIdade()
+                aluno.getNome(),
+                aluno.getSexo(),
+                aluno.getCodigoCurso(),
+                aluno.getNota(),
+                aluno.getIdade()
         });
     }
 }
