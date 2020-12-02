@@ -33,7 +33,7 @@
             <form class="box"
                   action="#"
                   th:action="@{/todosOsAlunos}"
-                  th:object="${novo_aluno}"
+                  th:object="${aluno}"
                   method="post">
 
                 <h3>Crie um novo aluno</h3>
@@ -53,7 +53,7 @@
                             id="nm_aluno"
                             placeholder="insira o nome do aluno"
                             required
-                            th:field="*{nm_novoAluno}">
+                            th:field="*{nm_aluno}">
 
 
                     <label for="sexo_aluno">Selecione o sexo do aluno:</label>
@@ -62,7 +62,7 @@
                                 id="sexo_aluno"
                                 class="form-select"
                                 required
-                                th:field="*{sx_novoAluno}">
+                                th:field="*{sg_sexoaluno}">
 
                             <option value="">Selecione o sexo</option>
                             <option>Masculino</option>
@@ -77,7 +77,7 @@
                                 id="idade_aluno"
                                 class="form-select"
                                 required
-                                th:field="*{idade_novoAluno}">
+                                th:field="*{qt_idade}">
 
 
                             <option value="">Selecione a idade do aluno</option>
@@ -96,7 +96,7 @@
                                 id="curso_aluno"
                                 class="form-select"
                                 required
-                                th:field="*{curso_novoAluno}">
+                                th:field="*{cd_curso}">
                             <option value="">Selecione o curso</option>
                             <option>ADS</option>
                             <option>GE</option>
@@ -113,7 +113,7 @@
                             name="aluno"
                             placeholder="Exemplo de média: 7.5"
                             required
-                            th:field="*{media_novoAluno}">
+                            th:field="*{qt_notaaluno}">
 
                     <button id="btnCriar" class="btn">Criar Aluno</button>
                 </div>
