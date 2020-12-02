@@ -29,6 +29,7 @@
 
 
         <main>
+
             <form class="box"
                   action="#"
                   th:action="@{/todosOsAlunos}"
@@ -51,30 +52,51 @@
                             type="text"
                             id="nm_aluno"
                             placeholder="insira o nome do aluno"
-                            required>
+                            required
+                            th:field="*{nm_novoAluno}">
+
 
                     <label for="sexo_aluno">Selecione o sexo do aluno:</label>
                     <div class="form-group">
-                        <select id="sexo_aluno" class="form-select" required>
+                        <select
+                                id="sexo_aluno"
+                                class="form-select"
+                                required
+                                th:field="*{sx_novoAluno}">
+
                             <option value="">Selecione o sexo</option>
                             <option>Masculino</option>
                             <option>Feminino</option>
                         </select>
                     </div>
 
+
                     <label for="idade_aluno">Selecione a idade do aluno:</label>
                     <div class="form-group">
-                        <select id="idade_aluno" class="form-select" required>
-                            <option value="">Selecione a idade</option>
-                            <option></option>
-                            <option></option>
+                        <select
+                                id="idade_aluno"
+                                class="form-select"
+                                required
+                                th:field="*{idade_novoAluno}">
+
+
+                            <option value="">Selecione a idade do aluno</option>
+
+                            <option th:each="idade : ${#numbers.sequence(16,120)}"
+                                    th:value="${idade}" th:text="${idade}">
+                            </option>
+
                         </select>
                     </div>
 
 
                     <label for="curso_aluno">Selecione o curso do aluno:</label>
                     <div class="form-group">
-                        <select id="curso_aluno" class="form-select" required>
+                        <select
+                                id="curso_aluno"
+                                class="form-select"
+                                required
+                                th:field="*{curso_novoAluno}">
                             <option value="">Selecione o curso</option>
                             <option>ADS</option>
                             <option>GE</option>
@@ -89,13 +111,15 @@
                             type="text"
                             id="media_aluno"
                             name="aluno"
-                            placeholder="Ex: 7.5"
-                            required>
+                            placeholder="Exemplo de média: 7.5"
+                            required
+                            th:field="*{media_novoAluno}">
 
                     <button id="btnCriar" class="btn">Criar Aluno</button>
                 </div>
 
             </form>
+
         </main>
 
 
