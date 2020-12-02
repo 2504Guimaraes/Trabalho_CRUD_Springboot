@@ -51,8 +51,18 @@ body{
     background: #FFF;
     max-width: 400px;
     box-shadow: 0px 8px 10px rgba(222, 221, 235, 0.2), 0px 16px 24px rgba(222, 221, 235, 0.14), 0px 6px 30px rgba(222, 221, 235, 0.12);
-    padding: 50px;
+    padding: 35px;
     margin: 35px auto;
+}
+
+#aviso_p_validacao {
+    background-color: #e9f0ff;
+    padding: 5px;
+    margin: 5px 0;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 19px;
+    font-size: 13px;
 }
 
 .inputs input,
@@ -60,22 +70,25 @@ body{
     display: block;
     width: 100%;
     border: 1px solid #C0C0C0;
-    border-radius: 5px;
+    border-radius: 2px;
     padding: 3px;
     margin: 10px 0;
     outline: none;
 }
 
-.btnCriar{
-    background: #E2E6EA;
-    border: 2px solid #C0C0C0;
-    border-radius: 3px;
+/* NOTA: criando id btnCriar p/ juntar estilo ao SpectreCSS... */
+
+#btnCriar, .btnCriar{
+    background: #3F51B5;
+    border: none;
+    color: #fff;
+    border-radius: 2px;
     display: block;
     width: 100%;
-    padding: 3px;
-    margin: 30px 0;
+    height: 2rem;
+    margin: 25px 0px 0px 0px;
+    box-shadow: 0px 0px 0px 3px #94adfc;
 }
-
 
 /*ApagarAluno.html*/
 
