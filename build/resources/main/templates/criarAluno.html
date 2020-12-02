@@ -29,7 +29,11 @@
 
 
         <main>
-            <div class="box">
+            <form class="box"
+                  action="#"
+                  th:action="@{/todosOsAlunos}"
+                  th:object="${novo_aluno}"
+                  method="post">
 
                 <h3>Crie um novo aluno</h3>
 
@@ -41,32 +45,37 @@
                 </p>
 
                 <div class="inputs">
-                    <label for="aluno">Digite o nome do aluno</label>
-                    <input type="text" name="aluno" placeholder="insira o nome do aluno">
 
-                    <label for="sexo">Selecione o sexo:</label>
+                    <label for="nm_aluno">Digite o nome do aluno</label>
+                    <input
+                            type="text"
+                            id="nm_aluno"
+                            placeholder="insira o nome do aluno"
+                            required>
+
+                    <label for="sexo_aluno">Selecione o sexo do aluno:</label>
                     <div class="form-group">
-                        <select class="form-select">
-                            <option>Selecione o sexo</option>
+                        <select id="sexo_aluno" class="form-select" required>
+                            <option value="">Selecione o sexo</option>
                             <option>Masculino</option>
                             <option>Feminino</option>
                         </select>
                     </div>
 
-                    <label for="idade">Selecione a idade:</label>
+                    <label for="idade_aluno">Selecione a idade do aluno:</label>
                     <div class="form-group">
-                        <select class="form-select">
-                            <option>Selecione a idade</option>
+                        <select id="idade_aluno" class="form-select" required>
+                            <option value="">Selecione a idade</option>
                             <option></option>
                             <option></option>
                         </select>
                     </div>
 
 
-                    <label for="curso">Selecione o curso:</label>
+                    <label for="curso_aluno">Selecione o curso do aluno:</label>
                     <div class="form-group">
-                        <select class="form-select">
-                            <option>Selecione o curso</option>
+                        <select id="curso_aluno" class="form-select" required>
+                            <option value="">Selecione o curso</option>
                             <option>ADS</option>
                             <option>GE</option>
                             <option>GP</option>
@@ -75,13 +84,18 @@
                         </select>
                     </div>
 
-                    <label for="aluno">Digite a nota média</label>
-                    <input type="text" name="aluno" placeholder="Ex 7.5">
+                    <label for="media_aluno">Digite a nota média final do aluno</label>
+                    <input
+                            type="text"
+                            id="media_aluno"
+                            name="aluno"
+                            placeholder="Ex: 7.5"
+                            required>
 
                     <button id="btnCriar" class="btn">Criar Aluno</button>
                 </div>
 
-            </div>
+            </form>
         </main>
 
 
