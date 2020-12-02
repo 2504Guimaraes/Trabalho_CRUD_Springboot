@@ -90,6 +90,13 @@ body{
     box-shadow: 0px 0px 0px 3px #94adfc;
 }
 
+#btnCriar:hover,
+.btnCriar:hover {
+    background: #334295;
+    transition: .40s ease-in-out;
+    cursor: pointer;
+}
+
 /*ApagarAluno.html*/
 
 .box.curso h3{
