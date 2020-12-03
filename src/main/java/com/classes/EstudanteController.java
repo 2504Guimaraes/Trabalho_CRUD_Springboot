@@ -17,7 +17,7 @@ public class EstudanteController {
     @Autowired
     private ApplicationContext context;
 
-    @GetMapping("/")
+    @GetMapping("/") // Definindo criaraluno.html como root pelo path da url
     public String cadastrarAluno(Model model) {
         model.addAttribute("aluno", new Aluno());
         return "criaraluno";

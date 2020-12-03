@@ -30,10 +30,13 @@
 
         <main>
 
+            <!--
+                th:action="@{/alunocadastrado}"
+                th:object="${aluno}"
+            -->
             <form class="box"
                   action="#"
-                  th:action="@{/alunocadastrado}"
-                  th:object="${aluno}"
+
                   method="post">
 
 
@@ -47,9 +50,13 @@
 
                 <div class="inputs">
 
+                    <!--
+                        th:field="*{nome}"
+                    -->
+
                     <label for="nm_aluno">Digite o nome do aluno</label>
                     <input
-                            th:field="*{nome}"
+
                             type="text"
                             id="nm_aluno"
                             placeholder="insira o nome do aluno"
@@ -58,8 +65,13 @@
 
                     <label for="sexo_aluno">Selecione o sexo do aluno:</label>
                     <div class="form-group">
+
+                        <!--
+                            th:field="*{sexo}"
+                        -->
+
                         <select
-                                th:field="*{sexo}"
+
                                 id="sexo_aluno"
                                 class="form-select"
                                 required>
@@ -73,8 +85,13 @@
 
                     <label for="curso_aluno">Selecione o curso do aluno:</label>
                     <div class="form-group">
+
+                        <!--
+                            th:field="*{codigoCurso}"
+                        -->
+
                         <select
-                                th:field="*{codigoCurso}"
+
                                 id="curso_aluno"
                                 class="form-select"
                                 required>
@@ -87,9 +104,14 @@
                         </select>
                     </div>
 
+
+                    <!--
+                        th:field="*{nota}"
+                    -->
+
                     <label for="media_aluno">Digite a nota média final do aluno</label>
                     <input
-                            th:field="*{nota}"
+
                             type="text"
                             id="media_aluno"
                             name="aluno"
@@ -98,8 +120,13 @@
 
                     <label for="idade_aluno">Selecione a idade do aluno:</label>
                     <div class="form-group">
+
+                        <!--
+                            th:field="*{idade}"
+                        -->
+
                         <select
-                                th:field="*{idade}"
+
                                 id="idade_aluno"
                                 class="form-select"
                                 required>
