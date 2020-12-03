@@ -17,9 +17,6 @@ public class EstudanteController {
     @Autowired
     private ApplicationContext context;
 
-    // Deixando página de Criação de Alunos
-    // como default (index) entre os html's.
-
     @GetMapping("/")
     public String cadastrarAluno(Model model) {
         model.addAttribute("aluno", new Aluno());
