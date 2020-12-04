@@ -25,7 +25,7 @@ public class AlunoDAO {
 
     public void insert(Aluno aluno)
     {
-        String sql = "insert into Aluno (nome, sexo, codigoCurso, nota, idade) values(?,?,?,?,?)";
+        String sql = "insert into aluno (nome, sexo, codigocurso, nota, idade) values(?,?,?,?,?)";
 
         jdbc.update(sql, new Object[] {
                 aluno.getNome(),

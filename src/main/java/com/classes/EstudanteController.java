@@ -26,15 +26,15 @@ public class EstudanteController {
 
     @GetMapping("/criar")
     public String criarAluno(Model model) {
-        model.addAttribute("novo_aluno", new Aluno());
+        model.addAttribute("aluno", new Aluno());
         return "criarAluno";
     }
 
     @PostMapping("/criado") /* Criando novo Aluno */
-    public String acaoCadastrar(@ModelAttribute Aluno novo_aluno, Model model) {
-        model.addAttribute("novo_aluno", novo_aluno);
+    public String acaoCadastrar(@ModelAttribute Aluno aluno, Model model) {
+        model.addAttribute("aluno", aluno);
         AlunoService pdao = context.getBean(AlunoService.class);
-        pdao.insert(novo_aluno);
+        pdao.insert(aluno);
         return "alunoCriado";
     }
 

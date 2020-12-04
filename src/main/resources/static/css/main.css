@@ -10,4 +10,5 @@ html,body {
 input, label, button {
     display: block;
     margin: 5px 0;
+    min-width: 350px;
 }

@@ -14,7 +14,7 @@
 
         <form action="#"
               th:action="@{/criado}"
-              th:object="${novo_aluno}"
+              th:object="${aluno}"
               method="post">
 
             <label for="aluno">Digite o nome do Aluno</label>
@@ -28,15 +28,13 @@
             <label for="sexo">Escolha o sexo do aluno</label>
 
             <select id="sexo" required th:field="*{sexo}">
-                <option value="">selecione</option>
-                <option th:value="${M}">Masculino</option>
-                <option th:value="${F}">Feminino</option>
+                <option th:value="'M'" th:text="Masculino"></option>
+                <option th:value="'F'" th:text="Feminino"></option>
             </select>
 
             <label for="curso">Escolha o curso</label>
 
             <select id="curso" required th:field="*{codigoCurso}">
-                <option value="">selecione</option>
                 <option th:value="${1}">Análise e Desenvolvimento de Sistemas</option>
                 <option th:value="${2}">Gestão Empresarial</option>
                 <option th:value="${3}">Gestão Portuária</option>
@@ -46,17 +44,21 @@
 
             <label for="nota">Digite a nota do Aluno</label>
             <input
-                    id="nota" type="text"
+                    id="nota"
+                    type="number"
+                    step="0.1"
                     placeholder="exemplo de nota: 7.5"
                     required th:field="*{nota}">
 
+
             <label for="idade">Selecione a idade do Aluno</label>
 
-            <select id="idade" required th:field="*{idade}">
-                <option th:each="age : ${#numbers.sequence(16,120)}"
-                        th:value="${age}" th:text="${age}">
-                </option>
-            </select>
+            <input
+                    id="idade"
+                    type="number" min="16"
+                    max="120"
+                    placeholder="digite sua idade"
+                    required>
 
             <button type="submit">Cadastrar</button>
         </form>
