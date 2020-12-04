@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{css/main.css}">
+        <!-- <link rel="stylesheet" th:href="@{css/spectre.css}"> -->
+        <title>CRUD - Spring Boot</title>
+    </head>
+    <body>
+
+
+        <ul>
+            <li><a th:href="@{/criar}">Criar aluno</a></li>
+            <li><a th:href="@{/apagar}">Excluir aluno</a></li>
+            <li><a th:href="@{/editar}">Editar aluno</a></li>
+            <li><a th:href="@{/todos}">Ver atodos os alunos da Fatec</a></li>
+            <li><a th:href="@{/homens}">Ver alunos homens</a></li>
+            <li><a th:href="@{/mulheres}">Ver alunas mulheres</a></li>
+            <li><a th:href="@{/reprovados}">Ver alunos reprovados</a></li>
+            <li><a th:href="@{/si}">Ver alunos de SI</a></li>
+            <li><a th:href="@{/ads}">Ver alunos de ADS</a></li>
+            <li><a th:href="@{/log}">Ver alunos de Logística</a></li>
+            <li><a th:href="@{/gp}">Ver alunos de Gestão Portuária</a></li>
+        </ul>
+
+
+    </body>
+</html>

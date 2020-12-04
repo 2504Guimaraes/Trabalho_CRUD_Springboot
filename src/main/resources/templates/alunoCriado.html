@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{css/main.css}">
+    <!-- <link rel="stylesheet" th:href="@{css/spectre.css}"> -->
+    <title>CRUD - Spring Boot</title>
+</head>
+<body>
+
+    <p th:text="'Aluno nome: ' + ${novo_aluno.nome}"></p>
+    <p th:text="'Aluno sexo: ' + ${novo_aluno.sexo}"></p>
+    <p th:text="'Aluno cd curso: ' + ${novo_aluno.codigoCurso}"></p>
+    <p th:text="'Aluno nota: ' + ${novo_aluno.nota}"></p>
+    <p th:text="'Aluno idade: ' + ${novo_aluno.idade}"></p>
+
+</body>
+</html>

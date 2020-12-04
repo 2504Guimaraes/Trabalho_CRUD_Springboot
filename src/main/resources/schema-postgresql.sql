@@ -41,23 +41,23 @@ create table if not exists Cursos (
 --   Criando finalmente minha tabela de Alunos, no caso criei nessa ordem só
 --   para dar enfase a esse processo.
 
-create table if not exists Alunos (
-    cd_aluno serial not null,
-    nm_aluno varchar(45),
-    sg_sexoAluno char(1),
-    cd_curso serial,
-    qt_notaAluno decimal(3,1),
-    qt_idade integer,
-    constraint PK_Aluno primary key (cd_aluno),
-    constraint FK_CursoAluno foreign key (cd_curso)
+create table if not exists Aluno (
+    id serial not null,
+    nome varchar(45),
+    sexo char(1),
+    codigoCurso serial,
+    nota decimal(3,1),
+    idade integer,
+    constraint PK_Aluno primary key (id),
+    constraint FK_CursoAluno foreign key (codigoCurso)
         references cursos(cd_curso),
     constraint Check_nota
-        check (qt_notaAluno between 0 and 10),
+        check (nota between 0 and 10),
     constraint Check_sexo
-        check (sg_sexoAluno = 'F' or
-                sg_sexoAluno = 'M'),
+        check (sexo = 'F' or
+                sexo = 'M'),
     constraint Check_idade
-        check (qt_idade between 16 and 120)
+        check (idade between 16 and 120)
 );
 
 /*

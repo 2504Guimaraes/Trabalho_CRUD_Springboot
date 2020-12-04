@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{css/main.css}">
+        <!-- <link rel="stylesheet" th:href="@{css/spectre.css}"> -->
+        <title>CRUD - Spring Boot</title>
+    </head>
+    <body>
+
+
+        <p>Crie seu aluno.</p>
+
+        <form action="#"
+              th:action="@{/criado}"
+              th:object="${novo_aluno}"
+              method="post">
+
+            <label for="aluno">Digite o nome do Aluno</label>
+            <input
+                    id="aluno"
+                    type="text"
+                    placeholder="seu nome"
+                    required
+                    th:field="*{nome}">
+
+            <label for="sexo">Escolha o sexo do aluno</label>
+
+            <select id="sexo" required th:field="*{sexo}">
+                <option value="">selecione</option>
+                <option th:value="${M}">Masculino</option>
+                <option th:value="${F}">Feminino</option>
+            </select>
+
+            <label for="curso">Escolha o curso</label>
+
+            <select id="curso" required th:field="*{codigoCurso}">
+                <option value="">selecione</option>
+                <option th:value="${1}">Análise e Desenvolvimento de Sistemas</option>
+                <option th:value="${2}">Gestão Empresarial</option>
+                <option th:value="${3}">Gestão Portuária</option>
+                <option th:value="${4}">Logística</option>
+                <option th:value="${5}">Sistemas p/ Internet</option>
+            </select>
+
+            <label for="nota">Digite a nota do Aluno</label>
+            <input
+                    id="nota" type="text"
+                    placeholder="exemplo de nota: 7.5"
+                    required th:field="*{nota}">
+
+            <label for="idade">Selecione a idade do Aluno</label>
+
+            <select id="idade" required th:field="*{idade}">
+                <option th:each="age : ${#numbers.sequence(16,120)}"
+                        th:value="${age}" th:text="${age}">
+                </option>
+            </select>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+
+    </body>
+</html>

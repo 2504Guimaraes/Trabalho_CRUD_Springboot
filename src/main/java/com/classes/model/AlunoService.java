@@ -9,7 +9,7 @@ public class AlunoService {
     @Autowired
     AlunoDAO alunoDAO;
 
-    public void inserirAluno(Aluno aluno) {
-        alunoDAO.inserirAluno(aluno);
+    public void insert(Aluno aluno) {
+        alunoDAO.insert(aluno);
     }
 }
