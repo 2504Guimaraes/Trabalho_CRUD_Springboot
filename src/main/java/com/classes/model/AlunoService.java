@@ -20,6 +20,22 @@ public class AlunoService {
         return alunoDAO.getAllAlunos();
     }
 
+    public List<Map<String, Object>> getAllHomens() {
+        return alunoDAO.getAllHomens();
+    }
+
+    public  List<Map<String, Object>> getAllMulheres() {
+        return  alunoDAO.getAllMulheres();
+    }
+
+    public List<Map<String, Object>> getAllReprovados() {
+        return alunoDAO.getAllReprovados();
+    }
+
+    public List<Map<String, Object>> getAllAlunosSI() {
+        return alunoDAO.getAllAlunosSI();
+    }
+
     public void deletarAluno(int idAluno) {
         alunoDAO.deletarAluno(idAluno);
     }
