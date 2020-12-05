@@ -4,38 +4,49 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" th:href="@{css/main.css}">
-        <!-- <link rel="stylesheet" th:href="@{css/spectre.css}"> -->
+        <link rel="stylesheet" th:href="@{css/spectre.css}">
         <title>CRUD - Spring Boot</title>
     </head>
     <body>
 
-
-        <p>Crie seu aluno.</p>
-
-        <form action="#"
+        <form id="form_criar" action="#"
               th:action="@{/criado}"
               th:object="${aluno}"
               method="post">
 
+            <h3 class="titulo_form">
+                Por favor ensira os dados do novo aluno a ser criado a baixo.
+            </h3>
+
+            <p id="aviso_p_validacao">
+                Aviso para validação!
+            </p>
+
+            <p>
+                Após preencher seus campo de aluno, você será capaz de fazer as devidas
+                atualizações ou exclusão do aluno caso deseje.
+            </p>
+
             <label for="aluno">Digite o nome do Aluno</label>
             <input
+                    class ="form-input"
                     id="aluno"
                     type="text"
                     placeholder="seu nome"
                     th:field="*{nome}"
                     required>
 
-            <label for="sexo">Escolha o sexo do aluno</label>
+            <label for="select_sexo">Escolha o sexo do aluno</label>
 
-            <select id="sexo" th:field="*{sexo}" required>
+            <select class="btn btn-link dropdown-toggle" id="select_sexo" th:field="*{sexo}" required>
                 <option disabled value="none" >Insira o sexo</option>
                 <option th:value="'M'" th:text="Masculino"></option>
                 <option th:value="'F'" th:text="Feminino"></option>
             </select>
 
-            <label for="curso">Escolha o curso</label>
+            <label for="select_curso">Escolha o curso</label>
 
-            <select id="curso" th:field="*{codigoCurso}" required>
+            <select class="btn btn-link dropdown-toggle" id="select_curso" th:field="*{codigoCurso}" required>
                 <option disabled value="-1" >Insira o curso</option>
                 <option th:value="${1}">Análise e Desenvolvimento de Sistemas</option>
                 <option th:value="${2}">Gestão Empresarial</option>
@@ -46,6 +57,7 @@
 
             <label for="nota">Digite a nota do Aluno</label>
             <input
+                    class="form-input"
                     id="nota"
                     type="number"
                     step="0.1"
@@ -58,6 +70,7 @@
             <label for="idade">Selecione a idade do Aluno</label>
 
             <input
+                    class="form-input"
                     id="idade"
                     type="number" min="16"
                     max="120"
@@ -65,7 +78,7 @@
                     th:field="*{idade}"
                     required>
 
-            <button type="submit">Cadastrar</button>
+            <button id="btn_criar" class="btn btn-primary" type="submit">Cadastrar</button>
         </form>
 
 

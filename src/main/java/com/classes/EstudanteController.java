@@ -37,11 +37,10 @@ public class EstudanteController {
     }
 
     @PostMapping("/criado") /* Criando novo Aluno */
-    public String acaoCadastrar(@ModelAttribute Aluno aluno, Model model) {
-        model.addAttribute("aluno", aluno);
+    public String acaoCadastrar(@ModelAttribute Aluno aluno) {
         AlunoService aluno_dao = context.getBean(AlunoService.class);
         aluno_dao.insert(aluno);
-        return "alunoCriado";
+        return "redirect:/todos";
     }
 
     @PostMapping("/apagar/{idAluno}")
