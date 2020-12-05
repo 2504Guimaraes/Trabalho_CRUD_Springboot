@@ -23,4 +23,16 @@ public class AlunoService {
     public void deletarAluno(int idAluno) {
         alunoDAO.deletarAluno(idAluno);
     }
+
+    public Map<String, Object> escolherAluno(int idAluno) {
+        return alunoDAO.escolherAluno(idAluno);
+    }
+
+    public void atualizarAlunoEscolhido(int idAluno, Aluno alunoAtualizado) {
+
+        alunoDAO.atualizarAlunoEscolhido(
+                idAluno,
+                alunoAtualizado
+        );
+    }
 }

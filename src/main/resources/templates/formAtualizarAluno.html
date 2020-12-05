@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{../css/main.css}">
+    <!-- <link rel="stylesheet" th:href="@{css/spectre.css}"> -->
+    <title>CRUD - Atualizar Aluno</title>
+    </head>
+    <body>
+
+
+    <p>
+        Edite os dados do aluno(a): <strong><p th:text="${antigoAlunoDados.nome}"></p></strong>
+    </p>
+
+        <form action="#"
+              th:action="@{'/atualizar/' + ${idAntigoAluno}}"
+              method="post">
+
+            <label for="aluno">Atualize o nome do Aluno</label>
+            <input
+                    id="aluno"
+                    type="text"
+                    placeholder="seu nome"
+                    th:field="*{antigoAlunoDados.nome}"
+                    required>
+
+            <label for="sexo">Atualize o sexo do aluno</label>
+
+            <select id="sexo" th:field="*{antigoAlunoDados.sexo}" required>
+                <option disabled value="none" >Insira o sexo</option>
+                <option th:value="'M'" th:text="Masculino"></option>
+                <option th:value="'F'" th:text="Feminino"></option>
+            </select>
+
+            <label for="nota">Atualize a nota do Aluno</label>
+            <input
+                    id="nota"
+                    type="number"
+                    step="0.1"
+                    min="0.0" max="10.0"
+                    placeholder="exemplo de nota: 7.5"
+                    th:field="*{antigoAlunoDados.nota}"
+                    required >
+
+
+            <label for="idade">Atualize a idade do Aluno</label>
+
+            <input
+                    id="idade"
+                    type="number" min="16"
+                    max="120"
+                    placeholder="digite sua idade"
+                    th:field="*{antigoAlunoDados.idade}"
+                    required>
+
+            <button type="submit">Atualizar dados</button>
+        </form>
+
+
+    </body>
+</html>

@@ -50,4 +50,22 @@ public class AlunoDAO {
         String sql = "delete from aluno where id = ?";
         jdbc.update(sql, new Object[] {idAluno});
     }
+
+    public Map<String, Object> escolherAluno(int idAluno) {
+        String sql = "select nome, sexo, nota, idade from aluno where aluno.id = ?";
+        return jdbc.queryForMap(sql, new Object[] {idAluno});
+    }
+
+    public void atualizarAlunoEscolhido(int idAluno, Aluno alunoAtualizado) {
+        String sql = "update aluno set nome = ?, sexo = ?, nota = ?, idade = ? where id = ?";
+
+
+        jdbc.update(sql, new Object[] {
+                alunoAtualizado.getNome(),
+                alunoAtualizado.getSexo(),
+                alunoAtualizado.getNota(),
+                alunoAtualizado.getIdade(),
+                idAluno
+        });
+    }
 }
