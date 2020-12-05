@@ -28,27 +28,33 @@ public class Aluno {
         this.idade = idade;
     }
 
+    // Setters:
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+       this.nome = nome;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public void setCodigoCurso(int codigoCurso) {
+        this.codigoCurso = codigoCurso;
+    }
+
+    public void setNota(double nota) {
+        this.nota = nota;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
     // Getters:
-
-    /*
-      AVISO IMPORTANTÍSSIMO!!!
-
-      Caso o nome dos atributos não seja compatível com o nome
-      dos seus métodos...
-
-      Exmeplo:
-
-      private int codigoCurso; <- atributo
-      public int getCodigoCurso() <- método get
-
-      note que a palavra "codigoatributo" aparece em ambos, independente de
-      letras maiusculas
-
-      .. o Thymeleaf será incapaz de fazer a alimentação na view,
-      impossibilitando vc de cadastrar o usuário ou qualquer outra
-      coisa do tipo... :P
-
-    */
 
     public int getId() {
         return this.id;
@@ -74,3 +80,25 @@ public class Aluno {
         return this.idade;
     }
 }
+
+
+
+ /*
+      AVISO IMPORTANTÍSSIMO!!!
+
+      Caso o nome dos atributos não seja compatível com o nome
+      dos seus métodos...
+
+      Exmeplo:
+
+      private int codigoCurso; <- atributo
+      public int getCodigoCurso() <- método get
+
+      note que a palavra "codigoatributo" aparece em ambos, independente de
+      letras maiusculas
+
+      .. o Thymeleaf será incapaz de fazer a alimentação na view,
+      impossibilitando vc de cadastrar o usuário ou qualquer outra
+      coisa do tipo... :P
+
+    */
