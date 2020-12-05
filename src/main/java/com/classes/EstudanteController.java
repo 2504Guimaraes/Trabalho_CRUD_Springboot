@@ -51,11 +51,6 @@ public class EstudanteController {
         return "redirect:/todos";
     }
 
-    @GetMapping("/editar")
-    public String editarAluno() {
-        return "editarAluno";
-    }
-
     /* --- Definindo controllers p/ chegar às listas de alunos: --- */
 
     @GetMapping("/todos")

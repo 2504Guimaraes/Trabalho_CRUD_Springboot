@@ -11,6 +11,13 @@ public class Aluno {
 
     public Aluno() {}
 
+    public Aluno( String nome, String sexo, double nota, int idade) {
+        this.nome = nome;
+        this.sexo = sexo;
+        this.nota = nota;
+        this.idade = idade;
+    }
+
     public Aluno( String nome, String sexo, int codigoCurso, double nota, int idade) {
         this.nome = nome;
         this.sexo = sexo;
