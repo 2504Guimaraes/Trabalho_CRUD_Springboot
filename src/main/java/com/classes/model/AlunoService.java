@@ -36,6 +36,22 @@ public class AlunoService {
         return alunoDAO.getAllAlunosSI();
     }
 
+    public List<Map<String, Object>> getAllAlunosADS() {
+        return alunoDAO.getAllAlunosADS();
+    }
+
+    public List<Map<String, Object>> getAllAlunosLOG() {
+        return alunoDAO.getAllAlunosLOG();
+    }
+
+    public List<Map<String, Object>> getAllAlunosGE() {
+        return alunoDAO.getAllAlunosGE();
+    }
+
+    public List<Map<String, Object>> getAllAlunosGP() {
+        return alunoDAO.getAllAlunosGP();
+    }
+
     public void deletarAluno(int idAluno) {
         alunoDAO.deletarAluno(idAluno);
     }

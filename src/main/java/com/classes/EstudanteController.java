@@ -94,23 +94,35 @@ public class EstudanteController {
     }
 
     @GetMapping("/ads")
-    public String listaADS() {
+    public String listaADS(Model model) {
+        AlunoService aluno_dao = context.getBean(AlunoService.class);
+        List<Map<String, Object>> listaDeADS = aluno_dao.getAllAlunosADS();
+        model.addAttribute("allDeADSLista", listaDeADS);
         return "alunosDeAds";
     }
 
     @GetMapping("/log")
-    public String listaLog() {
+    public String listaLog(Model model) {
+        AlunoService aluno_dao = context.getBean(AlunoService.class);
+        List<Map<String, Object>> listaDeLOG = aluno_dao.getAllAlunosLOG();
+        model.addAttribute("allDeLOGLista", listaDeLOG);
         return "alunosDeLog";
     }
 
-    @GetMapping("/gp")
-    public String listaGp() {
-        return "alunosDeGp";
+    @GetMapping("/ge")
+    public String listaGe(Model model) {
+        AlunoService aluno_dao = context.getBean(AlunoService.class);
+        List<Map<String, Object>> listaDeGE = aluno_dao.getAllAlunosGE();
+        model.addAttribute("allDeGELista", listaDeGE);
+        return "alunosDeGe";
     }
 
-    @GetMapping("/ge")
-    public String listaGe() {
-        return "alunosDeGe";
+    @GetMapping("/gp")
+    public String listaGp(Model model) {
+        AlunoService aluno_dao = context.getBean(AlunoService.class);
+        List<Map<String, Object>> listaDeGP = aluno_dao.getAllAlunosGP();
+        model.addAttribute("allDeGPLista", listaDeGP);
+        return "alunosDeGp";
     }
 
 }

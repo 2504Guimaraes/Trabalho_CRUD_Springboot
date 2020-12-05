@@ -74,6 +74,34 @@ public class AlunoDAO {
         return listaDeAlunosSI;
     }
 
+    public List<Map<String, Object>> getAllAlunosADS() {
+
+        String sql = "select * from aluno where aluno.codigocurso = 1";
+        List<Map<String, Object>> listaDeAlunosADS = (List<Map<String, Object>>) jdbc.queryForList(sql);
+        return listaDeAlunosADS;
+    }
+
+    public List<Map<String, Object>> getAllAlunosLOG() {
+
+        String sql = "select * from aluno where aluno.codigocurso = 4";
+        List<Map<String, Object>> listaDeAlunosLOG = (List<Map<String, Object>>) jdbc.queryForList(sql);
+        return listaDeAlunosLOG;
+    }
+
+    public List<Map<String, Object>> getAllAlunosGE() {
+
+        String sql = "select * from aluno where aluno.codigocurso = 2";
+        List<Map<String, Object>> listaDeAlunosGE = (List<Map<String, Object>>) jdbc.queryForList(sql);
+        return listaDeAlunosGE;
+    }
+
+    public List<Map<String, Object>> getAllAlunosGP() {
+
+        String sql = "select * from aluno where aluno.codigocurso = 3";
+        List<Map<String, Object>> listaDeAlunosGP = (List<Map<String, Object>>) jdbc.queryForList(sql);
+        return listaDeAlunosGP;
+    }
+
     public void deletarAluno(int idAluno) {
         String sql = "delete from aluno where id = ?";
         jdbc.update(sql, new Object[] {idAluno});
