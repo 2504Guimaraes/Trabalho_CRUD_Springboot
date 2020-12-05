@@ -6,6 +6,8 @@ import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
+import java.util.List;
+import java.util.Map;
 
 @Repository
 public class AlunoDAO {
@@ -23,8 +25,8 @@ public class AlunoDAO {
         jdbc = new JdbcTemplate(dataSource);
     }
 
-    public void insert(Aluno aluno)
-    {
+    public void insert(Aluno aluno) {
+
         String sql = "insert into aluno (nome, sexo, codigocurso, nota, idade) values(?,?,?,?,?)";
 
         jdbc.update(sql, new Object[] {
@@ -34,5 +36,18 @@ public class AlunoDAO {
                 aluno.getNota(),
                 aluno.getIdade()
         });
+    }
+
+    public List<Map<String, Object>> getAllAlunos() {
+
+        String sql = "select * from aluno";
+
+        List<Map<String, Object>> listaAlunos = (List<Map<String, Object>>) jdbc.queryForList(sql);
+        return  listaAlunos;
+    }
+
+    public void deletarAluno(int idAluno) {
+        String sql = "delete from aluno where id = ?";
+        jdbc.update(sql, new Object[] {idAluno});
     }
 }

@@ -12,3 +12,8 @@ input, label, button {
     margin: 5px 0;
     min-width: 350px;
 }
+
+.btns_editar,
+.btns_apagar {
+    min-width: fit-content;
+}
