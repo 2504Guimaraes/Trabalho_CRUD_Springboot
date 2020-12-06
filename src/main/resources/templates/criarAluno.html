@@ -9,6 +9,19 @@
     </head>
     <body>
 
+        <ul id="navbar">
+            <li><a th:href="@{/}">Criar aluno</a></li>
+            <li><a th:href="@{/todos}">Alunos da Fatec</a></li>
+            <li><a th:href="@{/homens}">Homens</a></li>
+            <li><a th:href="@{/mulheres}">Mulheres</a></li>
+            <li><a th:href="@{/reprovados}">Reprovados</a></li>
+            <li><a th:href="@{/si}">SI</a></li>
+            <li><a th:href="@{/ads}">ADS</a></li>
+            <li><a th:href="@{/log}">Logística</a></li>
+            <li><a th:href="@{/ge}">Gestão Empresarial</a></li>
+            <li><a th:href="@{/gp}">Gestão Portuária</a></li>
+        </ul>
+
         <form id="form_criar" action="#"
               th:action="@{/criado}"
               th:object="${aluno}"
@@ -19,7 +32,7 @@
             </h3>
 
             <p id="aviso_p_validacao">
-                Aviso para validação!
+                Atenção para validação!
             </p>
 
             <p>
@@ -27,10 +40,10 @@
                 atualizações ou exclusão do aluno caso deseje.
             </p>
 
-            <label for="aluno">Digite o nome do Aluno</label>
+            <label id="lbl_aluno" for="select_aluno">Digite o nome do Aluno</label>
             <input
                     class ="form-input"
-                    id="aluno"
+                    id="select_aluno"
                     type="text"
                     placeholder="seu nome"
                     th:field="*{nome}"

@@ -21,20 +21,15 @@ public class EstudanteController {
     private ApplicationContext context;
 
 
-    @GetMapping("/") /* Definindo Index */
-    public String index() {
-        return "index";
-    }
-
-
-
     /* Definindo outras rotas do (Estudante / Aluno) ... */
+    /* Definindo Index */
 
-    @GetMapping("/criar")
+    @GetMapping("/")
     public String criarAluno(Model model) {
         model.addAttribute("aluno", new Aluno());
         return "criarAluno";
     }
+
 
     @PostMapping("/criado") /* Criando novo Aluno */
     public String acaoCadastrar(@ModelAttribute Aluno aluno) {
