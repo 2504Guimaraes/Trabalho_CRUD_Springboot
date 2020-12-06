@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{css/main.css}">
-    <!-- <link rel="stylesheet" th:href="@{css/spectre.css}"> -->
+    <link rel="stylesheet" th:href="@{css/spectre.css}">
     <title>CRUD - Alunos de Gestão Portuária</title>
 </head>
 <body>
@@ -14,14 +14,14 @@
     <thead class="ttop">
 
     <tr class="table-info">
-        <td><b>ID</b></td>
-        <td><b>NOME</b></td>
-        <td><b>SEXO</b></td>
-        <td><b>CURSO</b></td>
-        <td><b>NOTA</b></td>
-        <td><b>IDADE</b></td>
-        <td></td>
-        <td></td>
+        <th><b>ID</b></th>
+        <th><b>NOME</b></th>
+        <th><b>SEXO</b></th>
+        <th><b>CURSO</b></th>
+        <th><b>NOTA</b></th>
+        <th><b>IDADE</b></th>
+        <th></th>
+        <th></th>
     </tr>
 
     </thead>
@@ -29,32 +29,32 @@
 
     <tr th:each="aluno : ${allDeGPLista}">
 
-        <td th:text="${aluno.id}"></td>
-        <td th:text="${aluno.nome}"></td>
-        <td th:text="${aluno.sexo}"></td>
+        <th th:text="${aluno.id}"></th>
+        <th th:text="${aluno.nome}"></th>
+        <th th:text="${aluno.sexo}"></th>
 
-        <td th:switch="${aluno.codigoCurso}">
+        <th th:switch="${aluno.codigoCurso}">
             <span th:case="'1'" th:text="'ADS'"></span>
             <span th:case="'2'" th:text="'GE'"></span>
             <span th:case="'3'" th:text="'GP'"></span>
             <span th:case="'4'" th:text="'LOG'"></span>
             <span th:case="'5'" th:text="'SI'"></span>
-        </td>
+        </th>
 
-        <td th:text="${aluno.nota}"></td>
-        <td th:text="${aluno.idade}"></td>
-        <td>
+        <th th:text="${aluno.nota}"></th>
+        <th th:text="${aluno.idade}"></th>
+        <th>
             <a th:href="@{'atualizar/' + ${aluno.id}}">
                 <button class="btns_editar">editar</button>
             </a>
-        </td>
-        <td>
+        </th>
+        <th>
             <form th:action="@{'apagar/' + ${aluno.id}}" method=post>
                 <button type="submit" class="btns_apagar">
                     apagar
                 </button>
             </form>
-        </td>
+        </th>
 
     </tr>
 

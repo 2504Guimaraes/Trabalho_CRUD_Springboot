@@ -14,9 +14,32 @@ html,body {
     flex-direction: column;
 }
 
+/* Design Menu */
+
+ul {
+    list-style: disc inside;
+    list-style-type: none !important;
+    margin-inline-start: 0px !important;
+}
+
+ul li { text-align: center; }
+ul li a { font-size: 1.035rem; font-weight: normal; }
+
+
 .btns_editar,
 .btns_apagar {
     min-width: fit-content;
+    background-color: #3F51B5;
+    box-shadow: 0px 0px 0px 2px #b8c2ff;
+    border: 0px;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 3px;
+}
+
+.btns_apagar {
+    background-color: #e00851;
+    box-shadow: 0px 0px 0px 2px #ffa2c1;
 }
 
 /* Formulário Criar Aluno: */
@@ -37,6 +60,10 @@ html,body {
     font-weight: 600;
 }
 
+#input_idade {
+    border-color: #bcc3ce;
+}
+
 #btn_criar {
     margin-top: 20px;
     width: 100%;
@@ -55,4 +82,37 @@ html,body {
     padding: 5px 10px;
     border-radius: 19px;
     font-size: 13px;
+}
+
+
+/* Design Tabelas: */
+
+
+table {
+    width: 80% !important;
+    max-width: 985px;
+    text-align: center;
+    overflow: hidden;
+    border-collapse: collapse;
+    /* border: 3px solid red; */
+    border-radius: 3px;
+    box-shadow: 0px 0px 8px 5px #deddeb;
+}
+
+table th { border-bottom: none; }
+thead { background-color: #504ece; }
+thead th b { color: #fff; font-weight: normal; }
+tbody th { font-weight: normal; }
+
+.table th {
+    border-bottom-width: 0px !important;
+}
+
+table th { /* Colunas dentro das linhas das tabelas. */
+    padding: 10px 15px !important;
+    text-align: center;
+}
+
+.table.table-striped tbody tr:nth-of-type(even) {
+    background: #fff !important;
 }
