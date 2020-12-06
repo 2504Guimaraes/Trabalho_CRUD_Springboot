@@ -29,7 +29,7 @@ public class AtualizarAlunoController {
             @PathVariable("idAluno") int idAluno, Model model) {
 
         AlunoService aluno_dao = context.getBean(AlunoService.class);
-        Map<String, Object> dadosCaptados =aluno_dao.escolherAluno(idAluno);
+        Map<String, Object> dadosCaptados = aluno_dao.escolherAluno(idAluno);
 
         BigDecimal nota = (BigDecimal) dadosCaptados.get("nota");
         double notaDouble = nota.doubleValue();
