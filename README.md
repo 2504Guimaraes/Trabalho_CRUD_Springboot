@@ -14,3 +14,6 @@ O arquivo application.yml (responsável pela conexão entre o domínio disponibi
 pelo Heroku, e as configurações do banco também disponibilizado pelo mesmo) está indisponível.
 Porém será deixado um modelo caso interesse por implementação similar dentro da
 pasta [../main/java/resources/Modelo application(yml)](#).
+
+### Link para as Classes do Projeto:
+As classes estão dentro do arquivo: [../main/java/com/classes](https://github.com/2504Guimaraes/Trabalho_CRUD_Springboot/tree/master/src/main/java/com/classes)
