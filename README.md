@@ -16,4 +16,4 @@ Porém será deixado um modelo caso interesse por implementação similar dentro
 pasta [../main/java/resources/Modelo application(yml)](#).
 
 ### Link para as Classes do Projeto:
-As classes estão dentro do arquivo: [../main/java/com/classes](https://github.com/2504Guimaraes/Trabalho_CRUD_Springboot/tree/master/src/main/java/com/classes)
+Link para as classes que estão dentro do arquivo: [../main/java/com/classes](https://github.com/2504Guimaraes/Trabalho_CRUD_Springboot/tree/master/src/main/java/com/classes)
