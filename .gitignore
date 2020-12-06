@@ -1,6 +1,2 @@
 application.yml
-gradle
-.idea
-.gradle
 src/main/resources/static/css/spectre.css
-build
