@@ -5,9 +5,9 @@ Componentes do Grupo: Ivan Guimarães, Nathalia Caroline e Breno Lins
 ---
 
 ## Projeto Springboot MVC
-Trabalho com o objetivo de fazer um projeto CRUD ultilizando da framework 
-Springboot mais hospedagem no Heroku para teste do professor. Como recomendação o
-banco ultilizado foi o PostgreSQL.
+Trabalho com o objetivo de fazer um projeto CRUD ultilizando na framework 
+Springboot mais hospedagem no Heroku para testes. Como recomendação o
+banco utilizado foi o PostgreSQL.
 
 ### Observações Importantes:
 O arquivo application.yml (responsável pela conexão entre o domínio disponibilizado 
@@ -16,4 +16,4 @@ Porém será deixado um modelo caso interesse por implementação similar dentro
 pasta [../main/java/resources/Modelo application(yml)](#).
 
 ### Link para as Classes do Projeto:
-Link para as classes que estão dentro do arquivo: [../main/java/com/classes](https://github.com/2504Guimaraes/Trabalho_CRUD_Springboot/tree/master/src/main/java/com/classes)
+Link para as classes que estão dentro do arquivo: [../main/java/com/classes](https://github.com/2504Guimaraes/Trabalho_CRUD_Springboot/tree/master/src/main/java/com/classes).
